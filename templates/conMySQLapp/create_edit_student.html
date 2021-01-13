@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+
+{% block content %}
+
+
+<div class="container">
+
+    <br/><br/><br/>
+    
+    <h1> {{ header_title }} </h1>
+    <br/>
+    <a href="{% url 'studentlist' %}" class="btn btn-info">Go Back</a>
+
+    
+    <br/><br/><br/>
+
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"> {{ form_title }} </h5>
+          <small> Student Id: {{ stdid }} </small>
+          <p class="card-text">
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"> <i class="fas fa-user"></i> </span>
+                    </div>
+                    {{ form.name }}
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"> <i class="fa fa-address-card"></i> </span>
+                    </div>
+                    {{ form.roll }}
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"> <i class="fas fa-phone"></i> </span>
+                    </div>
+                    {{ form.phone }}
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"> <i class="fas fa-envelope-square"></i> </span>
+                    </div>
+                    {{ form.email }}
+                </div>
+
+                <input type="submit" class="btn btn-primary" value="{{ button_name }}">
+            </form>
+
+          </p>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}
