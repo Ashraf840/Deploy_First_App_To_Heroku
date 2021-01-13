@@ -1,5 +1,7 @@
 Project Description:
 
+env: crms_env
+
 1. It has a simple CRUD functionality of a Student
 2. It database is hosted remotely in the cloud. (remotemysql.com)
 3. Install heroku in the ubuntu. & login to the heroku account through the terminal by executing "heroku login" command.
@@ -17,5 +19,6 @@ Project Description:
     i) pip install dj-database-url
     ii) pip install whitenoise
     iii) pip install gunicorn
+14. Make sure to have ("Procfile", "readme.txt", "requirements.txt", "runtime.txt") these files inside the root directory of the project, where the "db.sqlite3", "manage.py" files are located.
 12. Follow the article written in the following URL:
     https://www.codementor.io/@jamesezechukwu/how-to-deploy-django-app-on-heroku-dtsee04d4
