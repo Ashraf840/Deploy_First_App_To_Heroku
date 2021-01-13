@@ -20,5 +20,5 @@ env: crms_env
     ii) pip install whitenoise
     iii) pip install gunicorn
 14. Make sure to have ("Procfile", "readme.txt", "requirements.txt", "runtime.txt") these files inside the root directory of the project, where the "db.sqlite3", "manage.py" files are located.
-12. Follow the article written in the following URL:
+15. Follow the article written in the following URL:
     https://www.codementor.io/@jamesezechukwu/how-to-deploy-django-app-on-heroku-dtsee04d4
